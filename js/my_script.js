@@ -16,3 +16,67 @@ $(document).ready(function() {
     //$("ul").removeClass(".border");
 });
 
+// Custom jQuery event and event handler, triggers an interaction on click then the function () will be called.
+$(document).ready(function() {
+    $("#stream1_btn").on("click", function() {
+        $(".stream1").removeClass('highlight_stream');
+        $(".stream2").removeClass('highlight_stream');
+        $(".stream3").removeClass('highlight_stream');
+        $(".stream1").addClass('highlight_stream');
+    });
+}); 
+// Examples of jquery events
+$('p').click(function(){
+	$('p').css('color', 'red');
+});
+
+$('h2').hover(function(){
+	$('h2').css('background', 'lightblue');
+});
+
+ $(".card-panel").mouseenter(function(){
+    $("body").css("background-color", "black"); 
+});
+
+$(".card-panel").mouseleave(function(){
+    $("body").css("background-color", "#e1e2e2"); 
+});
+
+$(".button").on(function() {
+    $("#icon1").show('slow');
+    $("#icon2").show('medium');
+    $("#icon3").show('fast');
+    $("#icon4").show(1000);
+    $("#icon5").hide();
+    $("#icon6").fadeIn(1000);
+    $("#icon6").fadeOut(1000);
+    //FadeTo takes two parameters, the speed in ms and the opacity between 0-1
+    $("#icon7").fadeTo(1000, 0.5);
+});
+
+// Written event handler to click on all paragraphs, this
+$( "p" ).click(function() {
+    $( this ).slideUp();
+  });
+
+$("#card-panel-1").click(function() {
+    $("#card-panel-1").hide("slow");
+});
+
+$("#button-card-1").click(function() {
+    $("#par-1").slideToggle(750);
+});
+
+// Mouse enter and leave functions
+$("#button-card-1").mouseenter(function() {
+    $("#par-1").fadeTo(200, 0.5);
+});
+
+$("#button-card-1").mouseleave(function() {
+    $("#par-1").fadeTo(200, 1);
+});
+
+//Method chaining 
+$("#myButton").removeClass("blueBox").addClass("border");
+$("p").css("color", "blue").slideUp(2000).slideDown(2000);
+$("a").attr("href", "http://www.example.com");
