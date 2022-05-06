@@ -3,6 +3,9 @@
  *   As you made be trying to manipulate something that hasn't fully rendered alongside rest of the HTML
  *   Basics of DOM manipulation
 */
+
+/*
+commented out code 
 $(document).ready(function() {
     //$("h2").css("text-decoration", "underline");    /underlines all selected <h2> elements
     //$("ul").css("border", "solid 1px #ccc");    /applies solid border to all unordered list elements
@@ -80,3 +83,24 @@ $("#button-card-1").mouseleave(function() {
 $("#myButton").removeClass("blueBox").addClass("border");
 $("p").css("color", "blue").slideUp(2000).slideDown(2000);
 $("a").attr("href", "http://www.example.com");
+
+// Method chaining and adding/removing borders
+$("button").mouseenter(function(){
+	$('button').removeClass("make-red").addClass("make-border");
+});
+
+$("button").mouseleave(function(){
+	$("button").removeClass("make-border").addClass("make-red");
+});
+
+
+// Method chaining to add effects to text that add/removes it when a button is clicked upon
+$("#button-card-1").click(function() {
+    $("#par-1").hide(2000).show(2000);
+});
+
+//$("#button-card-2").click(function() {
+//    $("#par-2").fadeOut(1000).fadeIn(1000);
+//});
+
+*/
